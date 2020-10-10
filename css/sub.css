@@ -1,0 +1,160 @@
+.menu-trigger {
+	margin-right:1.5rem;
+	margin-bottom:0px;
+}
+.menu-trigger,
+.menu-trigger span {
+	display: inline-block;
+	transition: all .4s;
+	box-sizing: border-box;
+}
+
+.menu-trigger {
+	position: relative;
+	width:1.7rem;
+	height:1.5rem;
+}
+
+.menu-trigger span {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+	top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+	top:10px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+	bottom: 0;
+}
+
+/* type-01 */
+/* 중앙 라인이 고정된 자리에서 투명하게 사라지며 상하라인 회전하며 엑스자 만들기 */
+.menu-trigger.active-1 span:nth-of-type(1) {
+	-webkit-transform: translateY (10px) rotate (-45deg);
+	transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+	-webkit-transform: translateY(-10px) rotate(45deg);
+	transform: translateY(-10px) rotate(45deg);
+}
+
+nav{display:none;background:white;height:100vh;}
+nav ul{margin-top:20%;text-align:center;}
+nav ul li{font-size:30px}
+nav ul li a{color:#222}
+nav ul li:last-child{margin-top:3rem}
+nav div:last-child{position:fixed;bottom:0;text-align:center;background:url('../images/bg_nav_bottom.png') 0 bottom no-repeat;background-size:100% 100%;width:100%;height:40%;
+	padding-top:2rem}
+nav div:last-child p{font-weight:bold;color:#222;font-size:18px;}
+nav .active{display:block}
+.not_scroll{overflow-y: hidden; overflow-x: hidden;}
+.n_scroll{overflow-y:scroll; overflow-x: scroll;}
+header{position:fixed;top:0;z-index:999;width:100%;}
+header h1{display:inline-block;margin:1.3rem 0 0 1.5rem;height:34px;background:url('../images/img_logo.png') no-repeat 0 0;width:159px;}
+header h1 a{opacity:0;}
+.app_down_link{background:#222;text-align:center;padding:5px 0 9px;width:10rem;margin:10px auto 0;}
+.app_down_link a{color:white;font-size:12px}
+header.scroll {background-color: #fff; border-bottom: 1px solid #ddd;}
+header.scroll h1{background-image: url('../images/img_logo_on.png');margin-bottom:1.3rem}
+.burger{position: absolute;right:0;top:1.3rem}
+
+
+#sub_visual {width: 100%; height:50vh; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+#sub_visual.sub_visual01 {background-image: url(../images/sub_visual01.png);}
+#sub_visual.sub_visual02 {background-image: url(../images/sub_visual02.png);}
+#sub_visual .inner {position: relative; height: 100%;}
+#sub_visual .inner h2 {opacity: 0; margin-left:1.5rem;top:40%;position: absolute; font-family: 'Poppins'; font-size:25px; font-weight: 600; color: #fff; letter-spacing: 0;}
+#sub_visual .inner .ico {opacity: 0; display: block; position: absolute; bottom: 135px; right: 0; width: 195px; height: 194px; background: url(../images/sub_visual_icon.png) no-repeat 0 0; content: '';}
+#sub_visual .inner h2.on {animation: opacityAnimation 1s .5s ease 1 forwards;}
+#sub_visual .inner .ico.on {animation: opacityAnimation 1s .5s ease 1 forwards;}
+#sub_visual .inner .pattern {position: absolute; top:65%; transform: translateY(-50%); left:1.5rem;}
+#sub_visual .inner .pattern i {opacity: 0; display: block; float: left; background-repeat: no-repeat; background-position: 0 0; vertical-align: top;}
+#sub_visual .inner .pattern .ico01 {margin: 0 0 0; width:39px; height: 39px; background-image: url(../images/sub_visual_icon01.png);background-size:contain;}
+#sub_visual .inner .pattern .ico02 {margin: 0 0 0 2rem; width: 39px; height: 39px; background-image: url(../images/sub_visual_icon02.png);background-size:contain;}
+#sub_visual .inner .pattern .ico03 {margin: 1rem 0 0 2rem; width: 11px; height: 11px; background-position:bottom;background-image: url(../images/sub_visual_icon03.png);background-size:contain;}
+#sub_visual .inner .pattern .ico04 {margin: 0 0 0 2rem; width: 39px; height: 39px; background-image: url(../images/sub_visual_icon04.png);background-size:contain;}
+#sub_visual .inner .pattern.on .ico01 {animation: opacityAnimation 1s .5s ease 1 forwards;}
+#sub_visual .inner .pattern.on .ico02 {animation: opacityAnimation 1s 1s ease 1 forwards;}
+#sub_visual .inner .pattern.on .ico03 {animation: opacityAnimation 1s 1.5s ease 1 forwards;}
+#sub_visual .inner .pattern.on .ico04 {animation: opacityAnimation 1s 2s ease 1 forwards;}
+@-webkit-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-moz-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@-o-keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+@keyframes opacityAnimation {
+    from { opacity:0;}
+    to { opacity:1;}
+}
+
+/* sub contents */
+.sub_contents {padding:5rem 0 0;}
+/* 회사소개 */
+.company_text {margin: 0 auto;width:calc(100% - 3rem);padding:0 1.5rem}
+.company_text h3 {text-align:center;font-size:25px;color: #222;margin-bottom:2rem}
+.company_text img {display: block; width: 100%;}
+.company_text ul {margin:2rem 0 0; overflow: hidden;}
+.company_text ul li {font-size:14px; font-weight: 300; color: #141516; }
+.company_text ul li:last-child {padding-top:1rem}
+
+.business {background-color: #f9fafc;padding:5rem 0 0 0}
+.business .inner {position: relative;}
+.business .inner h3 {margin-left:1.5rem;line-height: 1; font-family: 'Poppins'; font-size:60px; font-weight: 500; color: #252525; letter-spacing: 0.05em;}
+.business .service_list{padding:0 1.5rem;width:calc(100% - 3rem);margin-top:3rem;overflow:hidden}
+.business .service_list .tit {font-size:17px; color: #222;float:right;width:70%;margin-bottom:.5rem}
+.business .service_list .ico {float:left;background-repeat: no-repeat; background-position: center 0;}
+.business .service_list > li:nth-child(1) .ico {background-image: url(../images/ico_business01.png);width:70px;height:70px;background-size:contain;}
+.business .service_list > li:nth-child(2) .ico {background-image: url(../images/ico_business02.png);width:70px;height:70px;background-size:contain}
+.business .service_list .txt_list {float: right; margin: 0;width:70%}
+.business .service_list li {padding: 0; font-size:14px; font-weight: 300; color: #222;overflow:hidden}
+.business .service_list .txt_list li + li {margin:10px 0 0;}
+.business .service_list .txt_list li:before {display: block; position: absolute; top: 18px; left: 0;content: '';}
+
+.service_list02 {width:calc(100% - 3rem);padding:5rem 1.5rem}
+.service_list02 ul li:after {display: block; clear: both; *zoom: 1; content: '';}
+.service_list02 ul li + li {margin: 80px 0 0;}
+.service_list02 .txt_box {float: left; padding:20px 0 0;}
+.service_list02 .txt_box span {display: block; font-family: 'Poppins'; font-size:20px; font-weight: 600; color: #ffe536;}
+.service_list02 .txt_box strong {display: block; margin: 15px 0 0; font-size:17px; color: #222;}
+.service_list02 .txt_box p {margin:15px 0 0; font-size:14px;font-weight: 300; color: #222;}
+.service_list02 .img_box {width:100%;text-align:center}
+.service_list02 .img_box img {width:100%;vertical-align: top;}
+
+
+/* 오시는 길 */
+#contact .contact_title {font-size:25px; font-weight: 600; color: #333;margin-left:1.5rem}
+#contact .contact_title p {display: inline-block; margin:1rem 0 0 0; font-size:15px; font-weight: 400; color: #333;}
+#contact .map_area {margin:3rem auto 5rem auto; width:90%; height:20rem;}
+#contact .map_area iframe {width: 100%; height: 100%; vertical-align: top;}
+
+
+/* Footer */
+#footer {padding:5rem 1.5rem;border-top:1px solid #e6e6e6}
+#footer:after {display: block; clear: both; *zoom: 1; content: '';}
+#footer .ft_info_area {width:100%;text-align:left;font-size:1.4rem;}
+#footer .ft_info_area .ft_logo {display: block;width:100%}
+#footer .ft_info_area p {line-height: 1.6; color: #666;}
+#footer .ft_info_area p span + span {margin: 0 0 0 15px;}
+#footer .ft_copy_area p {line-height: 1.5;color: #666;}
+#footer .ft_txt{clear:both;text-align:left;margin:1rem 0;font-size:1.4rem;}
